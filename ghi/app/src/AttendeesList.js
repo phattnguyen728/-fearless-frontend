@@ -11,15 +11,14 @@ function AttendeesList(props) {
         {props.attendees.map(attendee => {
           return (
             <tr key={attendee.href}>
-              <td>{attendee.name}</td>
-              <td>{attendee.conference}</td>
+              <td>{ attendee.name }</td>
+              <td>{ attendee.conference }</td>
             </tr>
           );
         })}
       </tbody>
     </table>
-  )
-
+  );
 }
 
 export default AttendeesList;
