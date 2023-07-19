@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
 
 function Nav() {
   return (
@@ -11,16 +12,35 @@ function Nav() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">Home</a>
+              {/* <a className="nav-link active" aria-current="page" href="/">Home</a> */}
+              <NavLink className="nav-link" aria-current="page" to="/">
+                Home
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" id="loc_link" aria-current="page" href="new-location.html">New location</a>
+              <NavLink className="nav-link" id="loc_link" aria-current="page" to="/locations/new">
+                New location
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" id="conf_link" aria-current="page" href="new-conference.html">New Conference</a>
+              <NavLink className="nav-link" id="conf_link" aria-current="page" to="/conferences/new">
+                New Conference
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="new-presentation.html">New Presentation</a>
+              <NavLink className="nav-link" aria-current="page" to="/attendees/new">
+                New Attendees
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" aria-current="page" to="/attendees">
+                Attendees
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" aria-current="page" to="/presentations/new">
+                New Presentation
+              </NavLink>
             </li>
           </ul>
         </div>

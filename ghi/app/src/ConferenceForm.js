@@ -98,109 +98,111 @@ function ConferenceForm() {
   }, []);
 
   return (
-    <div className="row">
-      <div className="offset-3 col-6">
-        <div className="shadow p-4 mt-4">
-          <h1>Create a new conference</h1>
-          <form onSubmit={handleSubmit} id="create-conference-form">
-            <div className="form-floating mb-3">
-              <input
-                onChange={handleNameChange}
-                placeholder="Name"
-                required
-                type="text"
-                name="name"
-                id="name"
-                className="form-control"
-                value={name}
-              />
-              <label htmlFor="name">Name</label>
-            </div>
-            <div className="form-floating mb-3">
-              <input
-                onChange={handleStartDateChange}
-                placeholder="Starts"
-                required
-                type="date"
-                name="starts"
-                id="starts"
-                className="form-control"
-                value={dateStarts}
-              />
-              <label htmlFor="starts">Starts</label>
-            </div>
-            <div className="form-floating mb-3">
-              <input
-                onChange={handleEndDateChange}
-                placeholder="Ends"
-                required
-                type="date"
-                name="ends"
-                id="ends"
-                className="form-control"
-                value={dateEnds}
-              />
-              <label htmlFor="room_count">Ends</label>
-            </div>
-            <div className="form-floating mb-3">
-              <textarea
-                onChange={handleDescriptionChange}
-                placeholder="Description"
-                required
-                name="description"
-                id="description"
-                className="form-control"
-                value={description}
-              ></textarea>
-              <label htmlFor="description">Description</label>
-            </div>
-            <div className="form-floating mb-3">
-              <input
-                onChange={handleMaxPresentationsChange}
-                placeholder="Max presentations"
-                required
-                type="number"
-                name="max_presentations"
-                id="max_presentations"
-                className="form-control"
-                value={maxPresentations}
-              />
-              <label htmlFor="max_presentations">Max presentations</label>
-            </div>
-            <div className="form-floating mb-3">
-              <input
-                onChange={handleMaxAttendeesChange}
-                placeholder="Max attendees"
-                required
-                type="number"
-                name="max_attendees"
-                id="max_attendees"
-                className="form-control"
-                value={maxAttendees}
-              />
-              <label htmlFor="max_attendees">Max attendees</label>
-            </div>
-            <div className="mb-3">
-              <select
-                required
-                onChange={handleLocationChange}
-                id="location"
-                className="form-select"
-                name="location"
-                value={location}
-              >
-                <option value="">Choose a location</option>
-                {states.map((locations) => {
-                  return (
-                    <option key={locations.name} value={locations.id}>
-                      {locations.name}
-                    </option>
-                  );
-                })}
-              </select>
-            </div>
-            <button className="btn btn-primary">Create</button>
-          </form>
+    <div className="my-5 container">
+      <div className="row">
+        <div className="offset-3 col-6">
+          <div className="shadow p-4 mt-4">
+            <h1>Create a new conference</h1>
+            <form onSubmit={handleSubmit} id="create-conference-form">
+              <div className="form-floating mb-3">
+                <input
+                  onChange={handleNameChange}
+                  placeholder="Name"
+                  required
+                  type="text"
+                  name="name"
+                  id="name"
+                  className="form-control"
+                  value={name}
+                />
+                <label htmlFor="name">Name</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  onChange={handleStartDateChange}
+                  placeholder="Starts"
+                  required
+                  type="date"
+                  name="starts"
+                  id="starts"
+                  className="form-control"
+                  value={dateStarts}
+                />
+                <label htmlFor="starts">Starts</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  onChange={handleEndDateChange}
+                  placeholder="Ends"
+                  required
+                  type="date"
+                  name="ends"
+                  id="ends"
+                  className="form-control"
+                  value={dateEnds}
+                />
+                <label htmlFor="room_count">Ends</label>
+              </div>
+              <div className="form-floating mb-3">
+                <textarea
+                  onChange={handleDescriptionChange}
+                  placeholder="Description"
+                  required
+                  name="description"
+                  id="description"
+                  className="form-control"
+                  value={description}
+                ></textarea>
+                <label htmlFor="description">Description</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  onChange={handleMaxPresentationsChange}
+                  placeholder="Max presentations"
+                  required
+                  type="number"
+                  name="max_presentations"
+                  id="max_presentations"
+                  className="form-control"
+                  value={maxPresentations}
+                />
+                <label htmlFor="max_presentations">Max presentations</label>
+              </div>
+              <div className="form-floating mb-3">
+                <input
+                  onChange={handleMaxAttendeesChange}
+                  placeholder="Max attendees"
+                  required
+                  type="number"
+                  name="max_attendees"
+                  id="max_attendees"
+                  className="form-control"
+                  value={maxAttendees}
+                />
+                <label htmlFor="max_attendees">Max attendees</label>
+              </div>
+              <div className="mb-3">
+                <select
+                  required
+                  onChange={handleLocationChange}
+                  id="location"
+                  className="form-select"
+                  name="location"
+                  value={location}
+                >
+                  <option value="">Choose a location</option>
+                  {states.map((locations) => {
+                    return (
+                      <option key={locations.name} value={locations.id}>
+                        {locations.name}
+                      </option>
+                    );
+                  })}
+                </select>
+              </div>
+              <button className="btn btn-primary">Create</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
